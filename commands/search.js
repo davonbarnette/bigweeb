@@ -1,6 +1,6 @@
 const { MessageEmbed } = require("discord.js");
-const { YOUTUBE_API_KEY } = require("../config.json");
 const YouTubeAPI = require("simple-youtube-api");
+const { YOUTUBE_API_KEY } = process.env;
 const youtube = new YouTubeAPI(YOUTUBE_API_KEY);
 
 module.exports = {
