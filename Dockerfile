@@ -1,10 +1,13 @@
-FROM node:12
+FROM strapi/base:14
+
 WORKDIR /usr/app
-COPY ./package.json .
-RUN npm install --quiet
+
+COPY ./package.json ./
+
+RUN npm install
+
 COPY . .
-RUN ["chmod", "+x", "run.sh"]
 
-ENV NODE_ENV=production
+ENV NODE_ENV production
 
-CMD ["./run.sh"]
+CMD ["npm", "run", "start"]
