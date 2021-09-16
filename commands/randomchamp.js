@@ -1,5 +1,5 @@
 const axios = require('axios');
-const utils = require('../util/EvobotUtil');
+const utils = require('../util/utils');
 module.exports = {
   name: "randomchamp",
   cooldown: 1,

@@ -5,7 +5,9 @@ module.exports = {
   aliases: ["h"],
   description: "Display all commands and descriptions",
   execute(message) {
-    let commands = message.client.commands.array();
+
+    let commands = [...message.client.commands].map(([_, value]) => value);
+    console.log('commands', commands)
 
     let helpEmbed = new MessageEmbed()
       .setTitle("boit daddy's here to help")
@@ -22,6 +24,6 @@ module.exports = {
 
     helpEmbed.setTimestamp();
 
-    return message.channel.send(helpEmbed).catch(console.error);
+    return message.channel.send({ embeds: [helpEmbed] }).catch(console.error);
   }
 };

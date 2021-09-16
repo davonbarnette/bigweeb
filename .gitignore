@@ -1,7 +1,8 @@
 /config.json
 /.idea
 /.vscode
-
+translate-service-account.json
+.env
 # Logs
 logs
 *.log
