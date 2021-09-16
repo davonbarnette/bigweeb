@@ -3,6 +3,9 @@
 /.vscode
 translate-service-account.json
 .env
+terraform.tfvars
+
+
 # Logs
 logs
 *.log
